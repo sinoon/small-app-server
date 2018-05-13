@@ -1,3 +1,7 @@
-exports.index = ctx => {
-    ctx.res.ok('hah')
+const getNews = require('../modules/getNews')
+
+exports.index = async ctx => {
+    const news = await getNews()
+
+    ctx.res.ok(news.data, 'success')
 }
