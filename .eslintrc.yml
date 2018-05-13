@@ -3,3 +3,11 @@ extends:
 
 parserOptions:
   sourceType: 'script'
+
+rules:
+  indent:
+    - 'error'
+    - 4
+  semi:
+    - 'error'
+    - 'never'
