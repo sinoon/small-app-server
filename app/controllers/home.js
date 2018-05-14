@@ -20,7 +20,6 @@ exports.welcome = ctx => {
         name: pkginfo.name,
         version: pkginfo.version,
         description: pkginfo.description,
-        author: pkginfo.author
     }
 
     ctx.res.ok(data, 'Hello, API!')
