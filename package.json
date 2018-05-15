@@ -27,7 +27,8 @@
         "test:coverage:integration": "npm run test:integration -- --coverage",
         "lint": "eslint app test",
         "lint:app": "eslint app",
-        "lint:test": "eslint test"
+        "lint:test": "eslint test",
+        "deploy": "now --docker --public"
     },
     "dependencies": {
         "bunyan": "^1.8.12",
