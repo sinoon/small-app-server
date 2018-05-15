@@ -2,7 +2,7 @@
 
 const bunyan = require('bunyan')
 
-function reqSerializer(ctx = {}) {
+function reqSerializer (ctx = {}) {
     return {
         method: ctx.method,
         path: ctx.path,
@@ -14,13 +14,13 @@ function reqSerializer(ctx = {}) {
     }
 }
 
-function resBodySerializer({ status, code, message } = {}) {
+function resBodySerializer ({ status, code, message } = {}) {
     const body = { status, message }
     if (code) body.code = code
     return body
 }
 
-function resSerializer(ctx = {}) {
+function resSerializer (ctx = {}) {
     return {
         statusCode: ctx.status,
         responseTime: ctx.responseTime,
@@ -38,7 +38,7 @@ function resSerializer(ctx = {}) {
  * @param {Object} options.logger - Logger instance of bunyan.
  * @return {function} Koa middleware.
  */
-function log(options = {}) {
+function log (options = {}) {
     const { logger = null } = options
 
     if (typeof logger !== 'object' || logger === null)

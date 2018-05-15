@@ -12,7 +12,7 @@ const uuidV4 = require('uuid/v4')
  * @param {function} [options.generator] - Id generator function.
  * @return {function} Koa middleware.
  */
-function requestId(options = {}) {
+function requestId (options = {}) {
     const {
         header = 'X-Request-Id',
         propertyName = 'reqId',

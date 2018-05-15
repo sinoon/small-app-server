@@ -22,7 +22,7 @@ const statusCodes = {
     GATEWAY_TIME_OUT: 504
 }
 
-function responseHandler() {
+function responseHandler () {
     return async (ctx, next) => {
         ctx.res.statusCodes = statusCodes
         ctx.statusCodes = ctx.res.statusCodes

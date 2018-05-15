@@ -45,7 +45,7 @@ app.use(logMiddleware({ logger }))
 app.use(router.routes())
 app.use(router.allowedMethods())
 
-function onError(err) {
+function onError (err) {
     if (apm.active) apm.captureError(err)
     logger.error({ err, event: 'error' }, 'Unhandled exception occured')
 }
@@ -59,8 +59,7 @@ if (!module.parent) {
         logger.info(
             { event: 'execute' },
             `API server listening on ${config.host}:${config.port}, in ${
-                config.env
-            }`
+                config.env}`
         )
     })
     server.on('error', onError)

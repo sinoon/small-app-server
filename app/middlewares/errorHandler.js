@@ -8,7 +8,7 @@ const { UNKNOWN_ENDPOINT, UNKNOWN_ERROR } = require('../constants/error')
  *
  * @return {function} Koa middleware.
  */
-function errorHandler() {
+function errorHandler () {
     return async (ctx, next) => {
         try {
             await next()
